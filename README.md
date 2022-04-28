@@ -64,11 +64,13 @@ module "vault" {
   resource_name_prefix = "test"
   # VPC ID you wish to deploy into
   vpc_id = "vpc-abc123xxx"
-  # private subnet tags are required and allow you to filter which
-  # subnets you will deploy your Vault nodes into
-  private_subnet_tags = {
-    Vault = "deploy"
-  }
+  # Private subnets you will deploy your Vault nodes into
+  # Recommendation: create the VPC using a module and reference its outputs
+  private_subnet_ids = [
+    "subnet-id-1",
+    "subnet-id-2",
+    "subnet-id-3"
+  ]
   # AWS Secrets Manager ARN where TLS certs are stored
   secrets_manager_arn = "arn:aws::secretsmanager:abc123xxx"
   # The shared DNS SAN of the TLS certs being used
