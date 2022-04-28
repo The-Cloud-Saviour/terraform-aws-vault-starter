@@ -8,11 +8,6 @@ variable "kms_key_arn" {
   description = "KMS Key ARN used for Vault auto-unseal"
 }
 
-variable "leader_tls_servername" {
-  type        = string
-  description = "One of the shared DNS SAN used to create the certs use for mTLS"
-}
-
 variable "resource_name_prefix" {
   type        = string
   description = "Resource name prefix used for tagging and naming AWS resources"

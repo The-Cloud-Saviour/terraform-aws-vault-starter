@@ -34,11 +34,6 @@ variable "kms_key_deletion_window" {
   description = "Duration in days after which the key is deleted after destruction of the resource (must be between 7 and 30 days)."
 }
 
-variable "leader_tls_servername" {
-  type        = string
-  description = "One of the shared DNS SAN used to create the certs use for mTLS"
-}
-
 variable "lb_certificate_arn" {
   type        = string
   description = "ARN of TLS certificate imported into ACM for use with LB listener"

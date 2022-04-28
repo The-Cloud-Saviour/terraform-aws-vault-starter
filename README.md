@@ -73,8 +73,6 @@ module "vault" {
   ]
   # AWS Secrets Manager ARN where TLS certs are stored
   secrets_manager_arn = "arn:aws::secretsmanager:abc123xxx"
-  # The shared DNS SAN of the TLS certs being used
-  leader_tls_servername = "vault.server.com"
   # The cert ARN to be used on the Vault LB listener
   lb_certificate_arn = "arn:aws:acm:abc123xxx"
 }

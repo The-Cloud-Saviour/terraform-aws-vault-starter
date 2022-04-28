@@ -39,7 +39,6 @@ module "user_data" {
 
   aws_region                  = data.aws_region.current.name
   kms_key_arn                 = module.kms.kms_key_arn
-  leader_tls_servername       = var.leader_tls_servername
   resource_name_prefix        = var.resource_name_prefix
   secrets_manager_arn         = var.secrets_manager_arn
   user_supplied_userdata_path = var.user_supplied_userdata_path
