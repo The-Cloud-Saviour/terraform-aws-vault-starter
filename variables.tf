@@ -18,7 +18,7 @@ variable "common_tags" {
 
 variable "instance_type" {
   type        = string
-  default     = "m5.xlarge"
+  default     = "t3.micro" # Original was m5.xlarge, cutting costs by default
   description = "EC2 instance type"
 }
 
